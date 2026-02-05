@@ -194,7 +194,7 @@ minetest.register_node("morelights_extras:stairlight", {
         return itemstack
     end,
 
-    on_rotate = screwdriver.rotate_simple
+    on_rotate = minetest.global_exists("sscrewdriver") and screwdriver.rotate_simple or nil
 })
 
 --
